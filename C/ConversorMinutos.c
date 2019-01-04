@@ -3,6 +3,7 @@
 
 void main() {
   int tempo, minutos = 0, horas = 0;
+  char letra;
   printf( "\n  -------------------------------\n  CONVERSOR DE MINUTOS PARA HORAS\n  -------------------------------\n\n  Valor (minutos) > " );
   scanf( "%d", &tempo );
   if( tempo < 0 || tempo > 1440 ) {
@@ -10,7 +11,12 @@ void main() {
   } else {
     horas = tempo / 60;
     minutos = tempo % 60;
-    printf( "\n  Resultado (horas) > %dh%d", horas, minutos);
+    letra = 'A';
+    if( horas > 12 ) {
+      horas -= 12;
+      letra = 'M';
+    }
+    printf( "\n  Resultado (horas) > %d:%d %cM", horas, minutos, letra);
   }
   printf( "\n\n  -------------------------------\n\n  " );
   system( "PAUSE" );
