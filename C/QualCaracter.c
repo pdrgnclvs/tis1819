@@ -1,19 +1,21 @@
+// Incluir as bibliotecas
 #include <stdio.h>
-#include <stdlib.h>
 
+// Ponto para iniciar o programa
 void main() {
-  char _;
-  printf( "Caracter: " );
-  scanf( "%c", &_ );
-  if( _ >= '0' && _ <= '9' ) {
+  char caracter;
+  printf( "\n  --------\n  CARACTER\n  --------\n\n  Caracter > " );
+  scanf( "%c", &caracter );
+  printf( "\n  --------\n\n  RESPOSTA > " );
+  if( caracter >= '0' && caracter <= '9' ) {
     printf( "Digito" );
-  } else if( _ >= 'a' && _ <= 'z' ) {
+  } else if( caracter >= 'a' && caracter <= 'z' ) {
     printf( "Minuscula" );
-  } else if( _ >= 'A' && _ <= 'Z' ) {
+  } else if( caracter >= 'A' && caracter <= 'Z' ) {
     printf( "Maiuscula" );
   } else {
     printf( "Invalido" );
   }
-  printf( "\n\n" );
-  system( "PAUSE" );
+  printf( "\n\n  --------\n\n  Prima [ENTER] para terminar . . . " );
+  getch();
 }

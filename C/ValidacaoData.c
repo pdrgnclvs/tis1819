@@ -1,16 +1,19 @@
+// Incluir as bibliotecas
 #include <stdio.h>
-#include <stdlib.h>
+
+// Definir as constantes
 #define ANO_ACTUAL 2019
 
+// Ponto para iniciar o programa
 void main() {
   int dia, mes, ano;
-  printf( "\n  DATA DESEJADA\n\n  D: " );
+  printf( "\n  -------------\n  DATA DESEJADA\n  -------------\n\n  Dia > " );
   scanf( "%d", &dia );
-  printf( "  M: " );
+  printf( "  Mes > " );
   scanf( "%d", &mes );
-  printf( "  A: " );
+  printf( "  Ano > " );
   scanf( "%d", &ano );
-  printf( "\n  " );
+  printf( "\n  -------------\n\n  " );
   if( mes < 1 || mes > 12 || dia < 1 || dia > 31 ) {
     printf( "ERRO > Data nao existe!" );
   } else if( mes == 2 && dia > 28 && ano % 4 != 0 ) {
@@ -22,6 +25,6 @@ void main() {
   } else {
     printf( "ERRO > Data futura, e como tal nao conta!" );
   }
-  printf( "\n\n  " );
-  system( "PAUSE" );
+  printf( "\n\n  -------------\n\n  Prima [ENTER] para terminar . . . " );
+  getch();
 }

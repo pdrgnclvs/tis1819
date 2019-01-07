@@ -1,22 +1,23 @@
+// Incluir as bibliotecas
 #include <stdio.h>
-#include <stdlib.h>
 
+// Ponto para iniciar o programa
 void main() {
   int numero;
   do {
-    printf( "Numero: " );
+    printf( "\n  ------------\n  PAR OU IMPAR\n  ------------\n\n  Numero (0 para sair) > " );
     scanf( "%d", &numero );
-    if( numero == 0 ) {
-      continue;
-    } else {
-      printf( "Resultado: " );
+    if( numero != 0 ) {
+      printf( "  Resultado > " );
       if( numero % 2 ) {
-        printf( "IMPAR" );
+        printf( "IMPAR\n" );
       } else {
-        printf( "PAR" );
+        printf( "PAR\n" );
       }
+    } else {
+      continue;
     }
-  printf( "\n\n" );
   } while( numero != 0 );
-  system( "PAUSE" );
+  printf( "\n  ------------\n\n  Prima [ENTER] para terminar . . . " );
+  getch();
 }
