@@ -1,7 +1,14 @@
-// Incluir as bibliotecas
+// Incluir as bibliotecas essenciais
 #include <stdio.h>
 
-// Ponto para iniciar o programa
+// Aguardar um [ENTER] para terminar
+void quit() {
+  printf( "\n\n  Prima [ENTER] para continuar . . . " );
+  fflush( stdin );
+  getchar();
+}
+
+// Ponto de arranque do programa
 void main() {
   char sexo, federado, codigoFederado[15], nome[15];
   int idade, lugar;
@@ -78,6 +85,6 @@ void main() {
         break;
     }
   }
-  printf( "\n\n  ---------------------\n\n  Prima [ENTER] para terminar . . . " );
-  getch();
+  printf( "\n\n  ---------------------" );
+  quit();
 }

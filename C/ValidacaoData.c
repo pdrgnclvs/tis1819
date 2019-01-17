@@ -1,10 +1,17 @@
-// Incluir as bibliotecas
+// Incluir as bibliotecas essenciais
 #include <stdio.h>
 
 // Definir as constantes
 #define ANO_ACTUAL 2019
 
-// Ponto para iniciar o programa
+// Aguardar um [ENTER] para terminar
+void quit() {
+  printf( "\n\n  Prima [ENTER] para continuar . . . " );
+  fflush( stdin );
+  getchar();
+}
+
+// Ponto de arranque do programa
 void main() {
   int dia, mes, ano;
   printf( "\n  -------------\n  DATA DESEJADA\n  -------------\n\n  Dia > " );
