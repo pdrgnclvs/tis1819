@@ -1,13 +1,16 @@
+// Bibliotecas
 #include <stdio.h>
+// Constantes
 #define MIL_QUI 1.609 // Factor de coversão
 
+// Programa
 int main( void ) {
   double milhas, quilometros;
   do {
-    printf( "Milhas? " );
+    printf( "Milhas > " );
     scanf( "%lf", &milhas );
   } while( milhas <= 0 );
   quilometros = MIL_QUI * milhas;
-  printf( "Corresponde a %4.2f quilometros!\n", quilometros );
+  printf( "Quilometros > %4.2f\n\n", quilometros );
   return 0;
 }
